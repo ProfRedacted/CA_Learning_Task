@@ -9,7 +9,7 @@ Steps:
 4) Press Space to play the program and Space to pause again
 5) Lastly, press "R" to reset the board to try out a new starting state
    
-Addionally, you can press "G" to randomly select a starting state.
+Addionally, you can press "G" to randomly generate a starting state.
 
 This is the definition for the Elementary CA of rule 184
 
