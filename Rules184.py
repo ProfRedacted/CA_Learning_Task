@@ -139,14 +139,14 @@ def main():
                          else:
                               playing = False
                          
-                    # reset the position
+                    # reset the position and counter
                     if event.key == pygame.K_r:
                          positions = set()
                          playing = False
                          count = 0
                          row = 0
 
-                    #generate new postion
+                    #generate random position postion
                     if event.key == pygame.K_g:
                          positions = generate(random.randrange(5, 10))
                                              
