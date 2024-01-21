@@ -13,12 +13,13 @@ Addionally, you can press "G" to randomly select a starting state.
 
 This is the definition for the Elementary CA of rule 184
 
-CA = { L^1, (0, 1) , (pattern of (L,C,R) state), Rules:
-                                                  1) 111 -> 1,
-                                                  2) 110 -> 0,
-                                                  3) 101 -> 1,
-                                                  4) 100 -> 1,
-                                                  5) 011 -> 1,
-                                                  6) 010 -> 0,
-                                                  7) 001 -> 0,
-                                                  8) 000 -> 0 }
+CA = { L^1, (0, 1) , (pattern of L,C,R), Rules:{
+                                               1) 111 -> 1,
+                                               2) 110 -> 0,
+                                               3) 101 -> 1,
+                                               4) 100 -> 1,
+                                               5) 011 -> 1,
+                                               6) 010 -> 0,
+                                               7) 001 -> 0,
+                                               8) 000 -> 0 } 
+                                               }
