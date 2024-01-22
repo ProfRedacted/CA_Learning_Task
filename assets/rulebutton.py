@@ -1,7 +1,7 @@
 import pygame
 
-nonselected_img = pygame.image.load("img/0.png")
-selected_img = pygame.image.load("img/1.png")
+nonselected_img = pygame.image.load("assets/0.png")
+selected_img = pygame.image.load("assets/1.png")
 
 notselected_width = nonselected_img.get_width()
 notselected_height = nonselected_img.get_height()

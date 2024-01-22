@@ -1,17 +1,17 @@
 import pygame
 import random
-import button
-import rulebutton
+import assets.button as button
+import assets.rulebutton as rulebutton
 
 pygame.init()
 
 #buttons
-menu_img = pygame.image.load("img/menu.png")
-play_img = pygame.image.load("img/playbtn.png")
-rules_img = pygame.image.load("img/rulesbtn.png")
-quit_img = pygame.image.load("img/quitbtn.png")
-selectrule_img = pygame.image.load("img/selectrule.png")
-done_img = pygame.image.load("img/donebtn.png")
+menu_img = pygame.image.load("assets/menu.png")
+play_img = pygame.image.load("assets/playbtn.png")
+rules_img = pygame.image.load("assets/rulesbtn.png")
+quit_img = pygame.image.load("assets/quitbtn.png")
+selectrule_img = pygame.image.load("assets/selectrule.png")
+done_img = pygame.image.load("assets/donebtn.png")
 
 play_btn = button.Button(310, 225, play_img, 1)
 rules_btn = button.Button(304, 378, rules_img, 1)

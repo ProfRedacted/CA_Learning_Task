@@ -9,7 +9,7 @@ Elementary cellular automata are one-dimensional, discrete mathematical models c
 
 Steps:
 1) Install pygame using "pip install pygame"
-2) Run the program
+2) Run the program (Rules184.py)
 3) Select the starting column by clicking any part of the column
 4) Press Space to play the program
 
@@ -20,6 +20,14 @@ Features
 - reset the board to try out a new starting state by pressing "R" key
 - randomly generate a starting state by pressing "G" key
 
-This is the definition for the Elementary CA
-CA = { L^1, (0, 1) , (pattern of L,C,R), Rules:{user input}
-    }
+The definition for the Elementary CA is configured in default as
+CA = { L^1, (0, 1) , (pattern of L,C,R), Rules:{
+                                               1) 111 -> 1,
+                                               2) 110 -> 0,
+                                               3) 101 -> 1,
+                                               4) 100 -> 1,
+                                               5) 011 -> 1,
+                                               6) 010 -> 0,
+                                               7) 001 -> 0,
+                                               8) 000 -> 0 } 
+                                               }
