@@ -13,6 +13,8 @@ class ruleButton():
 	def __init__(self, x, y):
 		self.image = pygame.transform.scale(nonselected_img, (int(notselected_width * 0.86), int(notselected_height * 0.86)))
 		self.rect = self.image.get_rect()
+		self.x = x
+		self.y = y
 		self.rect.topleft = (x, y)
 		self.clicked = False
 		self.selected = False
@@ -20,9 +22,11 @@ class ruleButton():
 
 	def toggleOn (self):
 		self.image = pygame.transform.scale(selected_img, (int(selected_width * 0.86), int(selected_height * 0.86)))
+		self.rect.topleft = (self.x + 2, self.y + 2)
 
 	def toggleOff (self):
 		self.image = pygame.transform.scale(nonselected_img, (int(notselected_width * 0.86), int(notselected_height * 0.86)))
+		self.rect.topleft = (self.x, self.y)
 
 
 	def draw(self, surface):

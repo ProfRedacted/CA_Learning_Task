@@ -16,7 +16,7 @@ done_img = pygame.image.load("img/donebtn.png")
 play_btn = button.Button(310, 225, play_img, 1)
 rules_btn = button.Button(304, 378, rules_img, 1)
 quit_btn = button.Button(386, 535, quit_img, 1)
-done_btn = button.Button(536, 530, done_img, 0.86)
+done_btn = button.Button(536, 575, done_img, 0.86)
 
 Rule0 =  rulebutton.ruleButton(151, 109)
 Rule1 = rulebutton.ruleButton(456, 109)
@@ -32,6 +32,7 @@ GREY = (100, 100, 100)
 YELLOW = (0, 0, 255)
 WHITE = (200, 200, 200)
 
+font = pygame.font.SysFont("felixtitling", 20)
 
 # Tile size
 WIDTH, HEIGHT = 1000, 600
@@ -42,7 +43,7 @@ FPS = 120
 
 RULES = []
 
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
+screen = pygame.display.set_mode((WIDTH, HEIGHT + 40))
 
 clock = pygame.time.Clock()
 
@@ -61,7 +62,7 @@ def drawGrid(positions):
           # write the tuple, unpacking the value
           pygame.draw.rect(screen, YELLOW, (*top_left, TILE_SIZE, TILE_SIZE))
 
-     for row in range(GRID_HEIGHT):
+     for row in range(GRID_HEIGHT + 1):
           pygame.draw.line(screen, WHITE, (0, row * TILE_SIZE),(WIDTH, row * TILE_SIZE))
 
      for col in range(GRID_WIDTH):
@@ -142,6 +143,7 @@ def main():
           clock.tick(FPS)
           
           if showMenu: 
+               pygame.display.set_caption("Elementary Cellular Automata")
                if not selectingRule: 
                     screen.blit(menu_img, (0, 0))
                     if play_btn.draw(screen):
@@ -171,6 +173,7 @@ def main():
                          update_rule ([1,0,0], Rule4)
                     if Rule5.draw(screen):
                          update_rule ([1,0,1], Rule5)
+                         print("5")
                     if Rule6.draw(screen):
                          update_rule ([1,1,0], Rule6)
                     if Rule7.draw(screen):
@@ -182,6 +185,9 @@ def main():
           else:
                screen.fill(GREY)
                drawGrid(positions)
+               _text = "m - menu     spacebar - play/pause     r - reset     g - generate random"
+               keyzz = font.render(_text, True, WHITE)
+               screen.blit(keyzz, (10, HEIGHT + 8))
 
                if playing:
                     count += 1
