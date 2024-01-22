@@ -194,10 +194,10 @@ def main():
 
                if count >= update_freq:
                     count = 0
-                    positions = updateGrid(positions, row)
                     row += 1
+                    positions = updateGrid(positions, row)
 
-               if row == GRID_HEIGHT:
+               if row == GRID_HEIGHT - 1:
                     playing = False
 
                pygame.display.set_caption("Playing" if playing else "Pause")
