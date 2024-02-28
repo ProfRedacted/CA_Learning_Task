@@ -237,8 +237,12 @@ def main():
                          row = 0
 
                     #generate random position postion
-                    if event.key == pygame.K_g:
-                         positions = generate(random.randrange(5, 10))                                             
+                    if event.key == pygame.K_g: 
+                         positions = set()
+                         positions = generate(random.randrange(5, 10))    
+                         playing = False
+                         count = 0
+                         row = 0                                        
 
      pygame.quit()
 
